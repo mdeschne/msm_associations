@@ -15,5 +15,8 @@ module MustSeeMoviesAssociations
       g.factory_girl false
       g.test_framework nil
     end
+
+
+
   end
 end
