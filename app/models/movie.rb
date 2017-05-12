@@ -11,4 +11,9 @@ validates :title, uniqueness: { scope: :year}
   validates :duration, numericality: { greater_than_or_equal_to: 0 }
    validates :duration, numericality: { less_than_or_equal_to: 2764800 }
 
+belongs_to :director, :class_name => "Director", :foreign_key => "director_id"
+
+has_many :characters
+has_many :actors, :through => :characters
+
 end
